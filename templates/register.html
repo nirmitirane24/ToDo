@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='login.css')}}">
+    <title>Register</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container-login">
+            <h2> Register</h2>
+            <form action="/register" method="POST">
+                <div class="mb-3">
+                    <label for="exampleInputname" class="form-label">Username</label>
+                    <input class="input-e" type="text" class="form-control" id="exampleInputname" name="username">
+                    <div id="name" class="form-text"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input class="input-e" type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>
+

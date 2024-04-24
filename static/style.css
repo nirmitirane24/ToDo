@@ -1,0 +1,193 @@
+/* Resetting default styles */
+* {
+    margin: 3;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #bacec1;
+}
+
+/* Header styles */
+.head {
+    margin: -8px;
+    background-color: #1d3124;
+    color: #fff;
+    padding: 12px;
+    margin-bottom: 6px;
+}
+
+.head .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head .logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+.head ul {
+    list-style: none;
+}
+
+.head ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.head ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Search bar styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-btn {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Content styles */
+.content {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.content-section-1{
+    background-color:#f6f4e8;
+    border-radius: 10px;
+}
+
+.content-section-2{
+    margin-top: 20px;
+    background-color: #f6f4e8;
+    border-radius: 10px;
+}
+
+
+/* Form styles */
+.form {
+    margin-left: 10px;
+    display: flow-root;
+    flex-direction: column;
+}
+
+.input-div {
+    margin-bottom: 15px;
+    margin-top: 8px;
+}
+
+.input-div label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-text {
+    padding: 8px 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: block;
+    margin-top: 11px;
+    text-align: start;
+    width: 508px;
+}
+
+.add-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: -1px;
+}
+.add-btn:hover{
+    background-color: #ade6ad;
+    border-color: #4caf50 ;
+}
+
+/* Table styles */
+.table-div {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.description-row {
+    width: 40%;
+}
+
+.button {
+    /* text-align: center; */
+    display: flex ;
+}
+.actions-btns {
+    display: inline-block;
+    padding: 8px 13px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.edit {
+    background-color:#333;
+    border: 2px solid #ccc;
+}
+
+.delete {
+    background-color: #f6f4f4;
+    color: #333;
+    border: 2px solid#333;
+}
+.edit:hover,
+.delete:hover {
+    background-color:#999;
+    border-color: #555;
+}
+.header-2{
+    margin-left: 8px;
+}
+
+/* General styling */
+

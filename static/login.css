@@ -1,0 +1,72 @@
+body {
+    background-color: #bacec1;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-login {
+    width: 300px;
+    padding: 59px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Increased border radius */
+    background-color: #f0f6f2;
+    transition: all 0.5s ease; /* Transition effect for smooth hover */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+.container-login:hover {
+    transform: translateY(-5px); /* Move up slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
+}
+
+.container-login h2 {
+    text-align: center;
+}
+
+.container-login form {
+    margin-top: 20px;
+}
+
+.container-login form .mb-3 {
+    margin-bottom: 20px;
+    margin-right: 23px;
+}
+
+.container-login form label {
+    font-weight: bold;
+}
+
+.container-login form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container-login form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1d3124;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container-login p {
+    text-align: center;
+}
+
+.container-login p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.container-login p a:hover {
+    text-decoration: underline;
+}

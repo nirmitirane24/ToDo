@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Update Todo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    </head>.
+    <body>
+        <header class="head">
+            <div class="content-header"> 
+
+                <h2><a href="/" class="logo">Todo it is </a></h2>
+
+                <ul>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/">About</a></li>
+                </ul>
+
+                <div class="search-bar">
+                    <input
+                    spellcheck="false"
+                    type="text"
+                    placeholder="Search a Todo..."
+                    name="search"
+                    id="search"
+                    class="search"/>
+                    <button class="search-btn" id="search-btn">Search</button>
+                </div>
+
+            </div>
+        </header>
+        <div class="container">
+            <div class="content section-1">
+                <h2>Add your Todos</h2>
+                <hr/>
+                <form method="POST" action="/update/{{todo.id}}" class="form">
+
+                    <div class="input-div">
+                      <label for="title">Enter your Todo Title</label> 
+                      <input 
+                      type="text"
+                      name="title" 
+                      id="title"
+                      value="{{todo.title}}"
+                      class="input-text"
+                      placeholder="Enter a title"
+                      />
+                    </div>
+
+                    <div class ="input-div"> 
+                        <label for="description">Describe your todo here</label>
+                        <input
+                        type="text"
+                        name="description"
+                        class="input-text"
+                        id="description"
+                        value="{{todo.desc}}"
+                        placeholder="Enter a description"
+                        />
+                    </div>
+
+                    <button class="add-btn" type="submit">Add</button>
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>

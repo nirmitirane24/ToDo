@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+        <title>Flask Todos App</title>
+    </head>
+    <body>
+        <header class="head">
+            <div class="content-header"> 
+                <h2>Todo it is</a></h2>
+                <ul>
+                    <li><a href="/" class="active">Home</a></li>
+                
+                </ul>
+                <div class="search-bar">
+                    <input
+                    spellcheck="false"
+                    type="text"
+                    placeholder="Search a Todo..."
+                    name="search"
+                    id="search"
+                    class="search"/>
+                    <button class="search-btn" id="search-btn">Search</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="content-section-1">
+                <form method="POST" action="/" class="form" name="form">
+                    <h2>Add your Todos</h2>
+                    <hr/>
+                    <div class="input-div">
+                      <label for="title">Enter your Todo Title</label> 
+                      <input 
+                      type="text"
+                      name="title" 
+                      id="title"
+                      class="input-text"
+                      placeholder="Enter a title"
+                      />
+                    </div>
+
+                    <div class ="input-div"> 
+                        <label for="description">Describe your todo here</label>
+                        <input
+                        type="text"
+                        name="description"
+                        class="input-text"
+                        id="description"
+                        placeholder="Enter a description"
+                        />
+                    </div>
+                    <button class="add-btn" type="submit">Add</button>
+                </form>
+            </div>
+
+            <div class="content-section-2">
+                <div class="table-div">
+                <h2 class='header-2'>Your Todos </h2>
+                <hr/>
+                    <table id="table">
+                        <thead>
+                            <tr>
+                                <th> Title</th>
+                                <th class="description-row">Description</th>
+                                <th>Created At</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {% for todo in todos %}
+                            <tr>
+                              <td>{{todo.title}}</td>
+                              <td>{{todo.desc}}</td>
+                              <td>{{todo.created_at}}</td>
+                              <td class="button row">
+                                <a href="/update/{{todo.id}}" class="actions-btns edit">Edit</a>
+                                <a href="/delete/{{todo.id}}" class="actions-btns delete">Delete</a>
+                              </td>
+                            </tr>
+                            {% endfor%}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> 
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const searchInput = document.getElementById('search');
+                const todoRows = document.querySelectorAll('#table tbody tr');
+        
+                searchInput.addEventListener('input', function() {
+                    const searchText = searchInput.value.trim().toLowerCase();
+        
+                    todoRows.forEach(function(row) {
+                        const title = row.querySelector('td:first-child').textContent.trim().toLowerCase();
+                        const description = row.querySelector('td:nth-child(2)').textContent.trim().toLowerCase();
+        
+                        if (title.includes(searchText) || description.includes(searchText)) {
+                            row.style.display = '';
+                        } else {
+                            row.style.display = 'none';
+                        }
+                    });
+                });
+        
+                todoRows.forEach(function(row) {
+                    row.addEventListener('click', function() {
+                        const todoId = row.dataset.todoId; // Assuming you set a data attribute for todo ID
+                        window.location.href = `/todo/${todoId}`; // Redirect to todo page
+                    });
+                });
+            });
+        </script>
+
+        
+        
+    </body>
+</html>
